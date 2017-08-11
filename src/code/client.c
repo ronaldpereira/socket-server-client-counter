@@ -20,7 +20,7 @@ void logexit(const char *str)
 
 int main(int argc, char **argv)
 {
-        if(argc < 2 || (argv[1][0] != '+' && argv[1][0] != '-'))
+        if(argc < 2 || (argv[1][0] != '+' && argv[1][0] != '-' && argv[1][0] != 'x'))
                 logexit("invalid parameter");
 
         int s = socket(AF_INET, SOCK_STREAM, 0);
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
         uint32_t counter = ntohl(*(uint32_t *)buf);
         snprintf(buf, BUFSZ, "%03d", counter);
         send(s, buf, 3, 0);
-	printf("%d\n", counter);
+	    printf("%d\n", counter);
 
         close(s);
         exit(EXIT_SUCCESS);

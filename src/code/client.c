@@ -34,6 +34,7 @@ int main(int argc, char **argv)
 
         if(connect(s, sa_dst, sizeof(dst))) logexit("connect");
 
+        // sleep(1); // Timeout testing
         send(s, argv[1], 1, 0);
         char buf[BUFSZ];
         if(4 != recv(s, buf, 4, MSG_WAITALL)) logexit("recv");

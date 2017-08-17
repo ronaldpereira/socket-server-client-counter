@@ -73,9 +73,10 @@ int main()
         }
 
         if(atoi(buffer) == tmpcounter) // If the received counter from the client is equal to the temporary counter, it updates the counter value
+        {
             counter = tmpcounter;
-
-        printf("%d\n", counter); // Prints the new counter
+            printf("%d\n", counter); // Prints the new counter
+        }
 
         buffer[0] == '\0'; // Clear the past buffer
 

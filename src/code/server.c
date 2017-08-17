@@ -78,9 +78,9 @@ int main()
             printf("%d\n", counter); // Prints the new counter
         }
 
-        buffer[0] == '\0'; // Clear the past buffer
-
 		_closeconnection: close(client); // Close the client connection
+
+        buffer[0] == '\0'; // Clear the past buffer
     }
 
     close(sock); // Close the socket connection
